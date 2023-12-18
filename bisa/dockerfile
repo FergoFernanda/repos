@@ -1,0 +1,11 @@
+# Gunakan base image yang sesuai
+FROM nginx:latest
+
+# Salin file web ke dalam direktori default nginx
+COPY . /usr/share/nginx/html
+
+# Port yang akan digunakan
+EXPOSE 80
+
+# Perintah untuk menjalankan nginx
+CMD ["nginx", "-g", "daemon off;"]
